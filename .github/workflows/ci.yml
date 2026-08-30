@@ -1,5 +1,7 @@
 name: CI Pipeline
 
+# Triggering CI pipeline run
+
 on:
   push:
     branches: [main]
