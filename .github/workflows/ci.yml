@@ -1,12 +1,9 @@
 name: CI Pipeline
 
-# Triggering CI pipeline run
-
 on:
   push:
     branches: [main]
   workflow_dispatch:
-
 
 jobs:
 
@@ -99,7 +96,6 @@ jobs:
         run: |
           pytest -v
 
-
   # =========================================================
   # Frontend Tests
   # =========================================================
@@ -126,7 +122,6 @@ jobs:
       - name: Run frontend tests
         working-directory: frontend
         run: npm run test:run
-
 
   # =========================================================
   # Build and Push Docker Images
@@ -196,5 +191,4 @@ jobs:
       - name: Push Docker image with latest tag
         run: |
           docker push \
-            ${{ vars.ACR_LOGIN_SERVER }}/${{ matrix.image }}:latest# retry trigger
-# retry trigger
+            ${{ vars.ACR_LOGIN_SERVER }}/${{ matrix.image }}:latest
