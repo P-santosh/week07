@@ -196,4 +196,4 @@ jobs:
       - name: Push Docker image with latest tag
         run: |
           docker push \
-            ${{ vars.ACR_LOGIN_SERVER }}/${{ matrix.image }}:latest
+            ${{ vars.ACR_LOGIN_SERVER }}/${{ matrix.image }}:latest# retry trigger
