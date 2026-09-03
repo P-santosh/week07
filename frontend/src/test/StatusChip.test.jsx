@@ -29,3 +29,6 @@ describe("StatusChip", () => {
     ).toBeInTheDocument();
   });
 });
+it("TEMP: force a failure to prove the CI gate works", () => {
+  expect(true).toBe(false);
+});
